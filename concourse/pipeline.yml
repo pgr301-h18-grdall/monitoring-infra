@@ -15,6 +15,7 @@ jobs:
       heroku_email: ((heroku_email))
       heroku_api_token: ((heroku_api_key))
 
+
 - name: infra
   plan:
   - aggregate:
@@ -25,6 +26,7 @@ jobs:
     params:
       github_token: ((github_token))
       heroku_api_key: ((heroku_api_key))
+      statuscake_api_key: ((statuscake_api_key))
       command: apply
       directories: |
           terraform
