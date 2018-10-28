@@ -2,10 +2,23 @@ provider "statuscake" {
   username = "glennbechgmailcom"
 }
 
-resource "statuscake_test" "google" {
-  website_name = "google.com"
-  website_url  = "www.google.com"
+resource "statuscake_test" "production" {
+  website_name = "${heroku_app.production.name}"
+  website_url  = "${heroku_app.production.web_url}"
   test_type    = "HTTP"
   check_rate   = 300
-  contact_id   = 12345
+}
+
+resource "statuscake_test" "stage" {
+  website_name = "${heroku_app.stage.name}"
+  website_url  = "${heroku_app.stage.web_url}"
+  test_type    = "HTTP"
+  check_rate   = 300
+}
+
+resource "statuscake_test" "ci" {
+  website_name = "${heroku_app.ci.name}"
+  website_url  = "${heroku_app.ci.web_url}"
+  test_type    = "HTTP"
+  check_rate   = 300
 }
