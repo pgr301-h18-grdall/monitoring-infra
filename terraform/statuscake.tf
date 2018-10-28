@@ -10,8 +10,8 @@ resource "statuscake_test" "production" {
 }
 
 resource "statuscake_test" "stage" {
-  website_name = "${heroku_app.stage.name}"
-  website_url  = "${heroku_app.stage.web_url}"
+  website_name = "${heroku_app.staging.name}"
+  website_url  = "${heroku_app.staging.web_url}"
   test_type    = "HTTP"
   check_rate   = 300
 }
