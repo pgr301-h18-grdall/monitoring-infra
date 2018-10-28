@@ -1,9 +1,9 @@
 # Modify this file to make it your own :-)
 
 variable "app_prefix" {
-  default = "gb-pipeline"
+  default = "gbmon"
 }
 
 variable "pipeline_name" {
-  default = "pgr301-pipeline-demo"
+  default = "pgr301-monitoring-demo"
 }
