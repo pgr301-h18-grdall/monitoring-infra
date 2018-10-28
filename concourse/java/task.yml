@@ -9,10 +9,6 @@ image_resource:
 inputs:
   - name: source
   - name: monitoring-infra
-  - name: settings
-
-caches:
-  - path: .m2/
 
 outputs:
   - name: jar-file

@@ -7,6 +7,8 @@ jobs:
     - get: monitoring-infra
   - task: mvn_build
     file: monitoring-infra/concourse/java/task.yml
+    input_mapping: {source: monitoring-app}
+
   - task: push_to_heroku
     file: monitoring-infra/concourse/heroku/push_master_to_heroku.yml
     input_mapping: {source: monitoring-app}
