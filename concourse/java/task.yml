@@ -14,4 +14,4 @@ outputs:
   - name: jar-file
 
 run:
-  path: monitoring-infra/concourse/java/maven-install/task.sh
+  path: monitoring-infra/concourse/java/task.sh
